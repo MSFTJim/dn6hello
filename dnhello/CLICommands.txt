@@ -1,0 +1,7 @@
+az account set --name Live-JFV-VSE
+
+az account set --name MSFT-Jamesvac
+az resource list
+az account set --name ME-MngEnvMCAP779795-jamesvac-1
+
+az group list --output table
