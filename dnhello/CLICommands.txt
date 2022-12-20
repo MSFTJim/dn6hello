@@ -1,7 +1,18 @@
 az account set --name Live-JFV-VSE
-
 az account set --name MSFT-Jamesvac
-az resource list
 az account set --name ME-MngEnvMCAP779795-jamesvac-1
 
 az group list --output table
+az resource list --output table
+
+-- CLI Test
+az group create --name myCLIRG33 --location "eastus2" 
+az appservice plan create -g myCLIRG33 -n MyCLIPlan --is-linux --sku B1
+az webapp create -g myCLIRG -p MyCLIPlan -n jfvGoodGin33 --runtime "DOTNETCORE:7.0" 
+
+az webapp list-runtimes --os-type linux
+
+az group create --name myCLIRG42 --location "eastus2" 
+az appservice plan create -g myCLIRG42 -n MyCLIPlan42 --is-linux --sku B1
+az webapp create -g myCLIRG42 -p MyCLIPlan42 -n jfvGoodGin42 --runtime "DOTNETCORE:7.0" 
+
