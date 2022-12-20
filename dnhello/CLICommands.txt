@@ -12,7 +12,8 @@ az webapp create -g myCLIRG -p MyCLIPlan -n jfvGoodGin33 --runtime "DOTNETCORE:7
 
 az webapp list-runtimes --os-type linux
 
-az group create --name myCLIRG42 --location "eastus2" 
-az appservice plan create -g myCLIRG42 -n MyCLIPlan42 --is-linux --sku B1
-az webapp create -g myCLIRG42 -p MyCLIPlan42 -n jfvGoodGin42 --runtime "DOTNETCORE:7.0" 
+az group create --name myCLIRG43 --location "eastus2" 
+az appservice plan create -g myCLIRG43 -n MyCLIPlan43 --is-linux --sku B1
+az webapp create -g myCLIRG43 -p MyCLIPlan43 -n jfvGoodGin43 --runtime "DOTNETCORE:7.0" 
 
+az resource list -g myCLIRG --query "[?contains(name, 'jfv')]" -o table
